@@ -1,7 +1,8 @@
 
 
 def main():
-    email = "adam_sandler@yahoo.com"
+    email = "adam.sandler@yahoo.com"
+
     if valid_email_format(email):
         print("Valid email format")
     else:
@@ -10,7 +11,7 @@ def main():
 
 def valid_email_format(email):
     """Return true if email contains @ and ."""
-    return "@" in email and "." in email
+    return len(email) > 2 and (email.find("@") < email.rfind("."))
 
 
 if __name__ == '__main__':
